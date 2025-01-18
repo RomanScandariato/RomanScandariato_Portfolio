@@ -9,7 +9,7 @@ function Landing() {
     <Container className="mt-5">
       <Row>
         <Col xs={12} md={6}>
-          <div style={{ marginTop: '225px' }}>
+          <div style={{ marginTop: '100px' }}>
             <h1 style={{ fontSize: '4rem' }}>Welcome to My Portfolio</h1>
             <h5>This is a brief introduction or description.</h5>
           </div>
