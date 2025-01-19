@@ -19,9 +19,9 @@ html, body, #root {
 
 .links-container {
   display: flex;
-  gap: 20px; /* Adjust the gap between the links as needed */
+  gap: 20px;
 }
 
 .links-container p {
-  margin: 0; /* Remove default margin from <p> tags */
+  margin: 0;
 }

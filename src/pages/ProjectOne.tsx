@@ -1,5 +1,4 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import '../index.css'; // Ensure you import the CSS file where the custom classes are defined
 
 function ProjectOne() {
   return (

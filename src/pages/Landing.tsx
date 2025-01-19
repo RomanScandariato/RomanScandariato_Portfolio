@@ -48,11 +48,22 @@ function Landing() {
             src="/images/MaypoDeluxeMain.png"
             alt="Project Image 1"
             className="img-fluid"
-            style={{ width: '50%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto' }}
           />
           <h5 style={{ marginTop: '20px' }}>Maypo Deluxe</h5>
           <p style={{ marginTop: '20px' }}>Full Stack Web App Development</p>
           <Button className="read-more-btn" onClick={() => navigate('/ProjectOne')}>Read more</Button>
+        </Col>
+        <Col className="mt-5">
+          <img
+            src="/images/FirstStepMain.png"
+            alt="Project Image 2"
+            className="img-fluid"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <h5 style={{ marginTop: '20px' }}>FirstStep Fitness</h5>
+          <p style={{ marginTop: '20px' }}>Full Stack Web App Development</p>
+          <Button className="read-more-btn" onClick={() => navigate('/ProjectTwo')}>Read more</Button>
         </Col>
       </Row>
     </Container>
