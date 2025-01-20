@@ -4,13 +4,17 @@ import { useNavigate } from 'react-router-dom';
 
 function Landing() {
   const navigate = useNavigate();
-  
+
   return (
     <Container className="mt-5">
       <Row>
         <Col xs={12} md={6}>
           <div style={{ marginTop: '100px' }}>
-            <h1 style={{ fontSize: '4rem' }}>Welcome to My Portfolio</h1>
+            <h1 style={{ fontSize: '4rem' }}>
+              Hi, I'm <br />
+              Roman Scandariato
+            </h1>
+            <h1 style={{ fontSize: '2rem', color: '#CC0133' }}>Software Engineer</h1>
             <h5 style={{ marginTop: '15px' }}>Earner demonstrated proficiency in web development focused on Full Stack languages in high demand. Through coding assignments and challenges augmented by three team projects, experience is gained in collaborating to build front-end and back-end web applications. Problem-solving skills are learned by researching and applying new skills independently. Graduates maintain a complete a portfolio of projects and demonstrate the ability to adapt and apply learning across industries and employers.</h5>
             <img
               src="/images/rut_badge.png"
@@ -38,7 +42,7 @@ function Landing() {
       <Row>
         <Col>
           <div className="mt-5">
-            <h1 style={{ fontSize: '4rem'  }}>Projects</h1>
+            <h1 style={{ fontSize: '4rem' }}>Projects</h1>
           </div>
         </Col>
       </Row>

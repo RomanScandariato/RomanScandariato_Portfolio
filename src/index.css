@@ -1,5 +1,16 @@
 html, body, #root {
   height: 100%;
+  background-color: #080413;
+  color: white;
+}
+
+.navbar-style .nav-link:hover {
+  text-decoration: none !important;
+  color: #CC0133 !important;
+}
+
+.navbar-style .nav-link.active {
+  color: #CC0133 !important;
 }
 
 .read-more-btn {
@@ -15,13 +26,4 @@ html, body, #root {
   background-color: white !important;
   color: black !important;
   border: 2px solid black !important;
-}
-
-.links-container {
-  display: flex;
-  gap: 20px;
-}
-
-.links-container p {
-  margin: 0;
 }

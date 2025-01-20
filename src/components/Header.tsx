@@ -2,10 +2,10 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
-  const textStyle = { color: 'black' };
+  const textStyle = { color: 'white' };
 
   return (
-    <Container className="navbar-style">
+    <Container className="navbar-style"> 
       <Navbar>
         <Container className="nav-wrap">
           <Navbar.Brand as={NavLink} to="/" style={textStyle}>Roman Scandariato</Navbar.Brand>
