@@ -4,7 +4,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer-text" style={{ backgroundColor: '#22242E', color: '#fff' }}>
+    <footer className="footer-text" style={{ backgroundColor: '#0E091C', color: '#fff' }}>
       <Container className="py-4">
         <Row className="align-items-center">
           <Col>

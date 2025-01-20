@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   const textStyle = { color: 'white' };
+  const containerStyle = { padding: '20px 0' };
 
   return (
-    <Container className="navbar-style"> 
+    <Container className="navbar-style" style={containerStyle}>
       <Navbar>
         <Container className="nav-wrap">
           <Navbar.Brand as={NavLink} to="/" style={textStyle}>Roman Scandariato</Navbar.Brand>

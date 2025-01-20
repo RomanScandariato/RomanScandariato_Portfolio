@@ -6,7 +6,7 @@ function Landing() {
   const navigate = useNavigate();
 
   return (
-    <Container className="mt-5">
+    <Container>
       <Row>
         <Col xs={12} md={6}>
           <div style={{ marginTop: '100px' }}>
