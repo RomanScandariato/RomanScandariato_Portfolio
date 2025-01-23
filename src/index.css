@@ -27,3 +27,31 @@ html, body, #root {
   color: black !important;
   border: 2px solid black !important;
 }
+
+.custom-button {
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s, color 0.3s !important;
+}
+
+.custom-button:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.custom-hr {
+  border: 0;
+  height: 8px;
+  background: white;
+  margin: 40px 0;
+}
+
+.no-underline {
+  text-decoration: none;
+}
