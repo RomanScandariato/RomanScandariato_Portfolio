@@ -1,4 +1,4 @@
-// import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,29 +7,55 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Landing() {
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => {
+      if (projectsRef.current) {
+        observer.unobserve(projectsRef.current);
+      }
+    };
+  }, []);
 
   return (
     <Container>
       <Row>
         <Col xs={12} md={6}>
           <div style={{ marginTop: '100px' }}>
-            <h1 style={{ fontSize: '4rem' }}>
+            <h1 className="typing-animation" style={{ fontSize: '4rem' }}>
               Hi, I'm <br />
               Roman Scandariato
             </h1>
-            <h1 style={{ fontSize: '2rem', color: '#CC0133' }}>Software Engineer</h1>
-            <h5 style={{ marginTop: '15px' }}>Earner demonstrated proficiency in web development focused on Full Stack languages in high demand. Through coding assignments and challenges augmented by three team projects, experience is gained in collaborating to build front-end and back-end web applications. Problem-solving skills are learned by researching and applying new skills independently. Graduates maintain a complete a portfolio of projects and demonstrate the ability to adapt and apply learning across industries and employers.</h5>
-            <h5 style={{ marginTop: '35px' }}>Graduate from Rutgers Software Development Bootcamp</h5>
-            <img
+            <h1 className="fade-in-2" style={{ fontSize: '2rem', color: '#CC0133' }}>Software Engineer</h1>
+            <h5 className="fade-in-3" style={{ marginTop: '15px' }}>Earner demonstrated proficiency in web development focused on Full Stack languages in high demand. Through coding assignments and challenges augmented by three team projects, experience is gained in collaborating to build front-end and back-end web applications. Problem-solving skills are learned by researching and applying new skills independently. Graduates maintain a complete a portfolio of projects and demonstrate the ability to adapt and apply learning across industries and employers.</h5>
+            <h5 className="fade-in-4" style={{ marginTop: '35px' }}>Graduate from Rutgers Software Development Bootcamp</h5>
+            <img 
               src="/images/rut_badge.png"
               alt="Rutgers Badge"
-              className="img-fluid"
+              className="img-fluid fade-in-4"
               style={{ width: '20%', height: 'auto', marginTop: '20px' }}
             />
             <img
               src="/images/rut_cert.png"
               alt="Rutgers Certificate"
-              className="img-fluid"
+              className="img-fluid fade-in-4"
               style={{ width: '30%', height: 'auto', marginTop: '20px', marginLeft: '50px' }}
             />
           </div>
@@ -43,7 +69,7 @@ function Landing() {
           />
         </Col>
       </Row>
-      <Row>
+      <Row ref={projectsRef} className={`projects-section ${isVisible ? 'fade-in' : ''}`}>
         <Col>
           <div className="mt-5">
             <h1 style={{ fontSize: '4rem' }}>Projects</h1>
@@ -51,7 +77,7 @@ function Landing() {
         </Col>
       </Row>
       <Row>
-        <Col className="mt-5">
+        <Col ref={projectsRef} className={`mt-5 projects-section ${isVisible ? 'fade-in' : ''}`}>
           <img
             src="/images/MaypoDeluxeMain.png"
             alt="Project Image 1"
@@ -62,7 +88,7 @@ function Landing() {
           <p style={{ marginTop: '20px' }}>Full Stack Web App Development</p>
           <Button className="read-more-btn" onClick={() => navigate('/ProjectOne')}>Read more</Button>
         </Col>
-        <Col className="mt-5">
+        <Col ref={projectsRef} className={`mt-5 projects-section-2 ${isVisible ? 'fade-in' : ''}`}>
           <img
             src="/images/FirstStepMain.png"
             alt="Project Image 2"
@@ -102,7 +128,7 @@ function Landing() {
       </Row>
       <Row>
         <Col className="mt-5">
-          <a href="https://github.com/RomanScandariato" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
+          <a href="https://github.com/RomanScandariato" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
             <FontAwesomeIcon icon={faGithub} size="3x" style={{ color: 'white', marginRight: '20px' }} />
             <h2 style={{ fontSize: '1.5rem', color: 'white' }}>github.com/RomanScandariato</h2>
           </a>
@@ -110,18 +136,18 @@ function Landing() {
       </Row>
       <Row>
         <Col>
-        <a href="mailto:rocketr0man98@gmail.com" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-                <FontAwesomeIcon icon={faEnvelope} size="3x" style={{ color: 'white', marginRight: '20px' }} />
-                <h2 style={{ fontSize: '1.5rem', color: 'white' }}>rocketr0man98@gmail.com</h2>
-              </a>
+          <a href="mailto:rocketr0man98@gmail.com" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+            <FontAwesomeIcon icon={faEnvelope} size="3x" style={{ color: 'white', marginRight: '20px' }} />
+            <h2 style={{ fontSize: '1.5rem', color: 'white' }}>rocketr0man98@gmail.com</h2>
+          </a>
         </Col>
       </Row>
       <Row className="mb-5">
         <Col>
-        <a href="https://www.linkedin.com/in/roman-scandariato-524469340" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center'}}>
-                <FontAwesomeIcon icon={faLinkedin} size="3x" style={{ color: 'white', marginRight: '20px' }} />
-                <h2 style={{ fontSize: '1.5rem', color: 'white' }}>linkedin.com/in/romanscandariato</h2>
-              </a>
+          <a href="https://www.linkedin.com/in/roman-scandariato-524469340" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center' }}>
+            <FontAwesomeIcon icon={faLinkedin} size="3x" style={{ color: 'white', marginRight: '20px' }} />
+            <h2 style={{ fontSize: '1.5rem', color: 'white' }}>linkedin.com/in/romanscandariato</h2>
+          </a>
         </Col>
       </Row>
     </Container>
