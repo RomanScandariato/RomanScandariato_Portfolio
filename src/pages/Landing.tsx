@@ -8,7 +8,15 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function Landing() {
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
+  const [isH2Visible1, setIsH2Visible1] = useState(false);
+  const [isH2Visible2, setIsH2Visible2] = useState(false);
+  const [isReachOutVisible, setIsReachOutVisible] = useState(false);
+  const [isConnectVisible, setIsConnectVisible] = useState(false);
   const projectsRef = useRef(null);
+  const h2Ref1 = useRef(null);
+  const h2Ref2 = useRef(null);
+  const reachOutRef = useRef(null);
+  const connectRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,14 +30,100 @@ function Landing() {
         threshold: 0.1,
       }
     );
-
     if (projectsRef.current) {
       observer.observe(projectsRef.current);
     }
-
     return () => {
       if (projectsRef.current) {
         observer.unobserve(projectsRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer1 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsH2Visible1(true);
+          observer1.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    if (h2Ref1.current) {
+      observer1.observe(h2Ref1.current);
+    }
+    return () => {
+      if (h2Ref1.current) {
+        observer1.unobserve(h2Ref1.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsH2Visible2(true);
+          observer2.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    if (h2Ref2.current) {
+      observer2.observe(h2Ref2.current);
+    }
+    return () => {
+      if (h2Ref2.current) {
+        observer2.unobserve(h2Ref2.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer3 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsReachOutVisible(true);
+          observer3.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    if (reachOutRef.current) {
+      observer3.observe(reachOutRef.current);
+    }
+    return () => {
+      if (reachOutRef.current) {
+        observer3.unobserve(reachOutRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer4 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsConnectVisible(true);
+          observer4.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    if (connectRef.current) {
+      observer4.observe(connectRef.current);
+    }
+    return () => {
+      if (connectRef.current) {
+        observer4.unobserve(connectRef.current);
       }
     };
   }, []);
@@ -38,7 +132,7 @@ function Landing() {
     <Container>
       <Row>
         <Col xs={12} md={6}>
-          <div style={{ marginTop: '100px' }}>
+          <div style={{ marginTop: '75px' }}>
             <h1 className="typing-animation" style={{ fontSize: '4rem' }}>
               Hi, I'm <br />
               Roman Scandariato
@@ -46,7 +140,7 @@ function Landing() {
             <h1 className="fade-in-2" style={{ fontSize: '2rem', color: '#CC0133' }}>Software Engineer</h1>
             <h5 className="fade-in-3" style={{ marginTop: '15px' }}>Earner demonstrated proficiency in web development focused on Full Stack languages in high demand. Through coding assignments and challenges augmented by three team projects, experience is gained in collaborating to build front-end and back-end web applications. Problem-solving skills are learned by researching and applying new skills independently. Graduates maintain a complete a portfolio of projects and demonstrate the ability to adapt and apply learning across industries and employers.</h5>
             <h5 className="fade-in-4" style={{ marginTop: '35px' }}>Graduate from Rutgers Software Development Bootcamp</h5>
-            <img 
+            <img
               src="/images/rut_badge.png"
               alt="Rutgers Badge"
               className="img-fluid fade-in-4"
@@ -62,10 +156,10 @@ function Landing() {
         </Col>
         <Col xs={12} md={6}>
           <img
-            src="/images/test_main_img.png"
+            src="/images/test_main_img_3.jpg"
             alt="Main Portfolio Picture"
             className="img-fluid"
-            style={{ width: '90%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', marginTop: '50px' }}
           />
         </Col>
       </Row>
@@ -105,7 +199,7 @@ function Landing() {
           <Row>
             <hr className="custom-hr" />
           </Row>
-          <h2>“I see it, you know when I'm talking to you or when you've asked me questions or you're showing me something. I see that comprehension that's very rare at this point, and for 3 months in.. huge potential for you in the future. Keep that drive going because you have something here, and you're very far along in your understanding. Everybody here that's worked with you has to agree that Roman has been a big integral and a vital part of everybody's success.” - JD Tadlock</h2>
+          <h2 ref={h2Ref1} className={isH2Visible1 ? 'fade-in-2' : 'hidden'}>“I see it, you know when I'm talking to you or when you've asked me questions or you're showing me something. I see that comprehension that's very rare at this point, and for 3 months in.. huge potential for you in the future. Keep that drive going because you have something here, and you're very far along in your understanding. Everybody here that's worked with you has to agree that Roman has been a big integral and a vital part of everybody's success.” - JD Tadlock</h2>
         </Col>
       </Row>
       <Row>
@@ -113,11 +207,11 @@ function Landing() {
           <Row>
             <hr className="custom-hr" />
           </Row>
-          <h2>“You should take pride in meeting the demands of this intensive and immersive educational experience. The Boot Camp requires participants to maintain an unwaveringly rapid pace, and these credentials document your success in resolving coding challenges – both as an individual and as a member of project-based teams. These credentials will remain an enduring symbol of your strength and resilience, and they affirm your ability to surmount steep challenges through hard work and creative problem solving.” - James R. Morris</h2>
+          <h2 ref={h2Ref2} className={isH2Visible2 ? 'fade-in-2' : 'hidden'}>“You should take pride in meeting the demands of this intensive and immersive educational experience. The Boot Camp requires participants to maintain an unwaveringly rapid pace, and these credentials document your success in resolving coding challenges – both as an individual and as a member of project-based teams. These credentials will remain an enduring symbol of your strength and resilience, and they affirm your ability to surmount steep challenges through hard work and creative problem solving.” - James R. Morris</h2>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col ref={reachOutRef} className={`mt-5 ${isReachOutVisible ? 'fade-in-2' : 'hidden'}`}>
           <div className="mt-5">
             <Row>
               <hr className="custom-hr" />
@@ -127,7 +221,7 @@ function Landing() {
         </Col>
       </Row>
       <Row>
-        <Col className="mt-5">
+        <Col ref={connectRef} className={`mt-5 ${isConnectVisible ? 'fade-in-1' : 'hidden'}`}>
           <a href="https://github.com/RomanScandariato" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
             <FontAwesomeIcon icon={faGithub} size="3x" style={{ color: 'white', marginRight: '20px' }} />
             <h2 style={{ fontSize: '1.5rem', color: 'white' }}>github.com/RomanScandariato</h2>
@@ -135,7 +229,7 @@ function Landing() {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col ref={connectRef} className={` ${isConnectVisible ? 'fade-in-1' : 'hidden'}`}>
           <a href="mailto:rocketr0man98@gmail.com" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
             <FontAwesomeIcon icon={faEnvelope} size="3x" style={{ color: 'white', marginRight: '20px' }} />
             <h2 style={{ fontSize: '1.5rem', color: 'white' }}>rocketr0man98@gmail.com</h2>
@@ -143,7 +237,7 @@ function Landing() {
         </Col>
       </Row>
       <Row className="mb-5">
-        <Col>
+        <Col ref={connectRef} className={` ${isConnectVisible ? 'fade-in-1' : 'hidden'}`}>
           <a href="https://www.linkedin.com/in/roman-scandariato-524469340" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ display: 'flex', alignItems: 'center' }}>
             <FontAwesomeIcon icon={faLinkedin} size="3x" style={{ color: 'white', marginRight: '20px' }} />
             <h2 style={{ fontSize: '1.5rem', color: 'white' }}>linkedin.com/in/romanscandariato</h2>
