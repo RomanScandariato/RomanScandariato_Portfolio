@@ -37,7 +37,7 @@ function ProjectTwo() {
           </div>
           <div className="mt-3">
             <h5>This project was a collaborative effort between myself and three other developers, designed to create a web application that inspires users to try new exercises and manage their fitness routines. The app allows users to create a free account, browse exercises by targeted muscle groups, save their favorites, update routines as they progress, and delete beginner-level exercises as their skills improve. Balancing usability with robust functionality made the project both challenging and rewarding.</h5>
-            <h5>We built the platform using TypeScript, React, Node.js, and MongoDB, leveraging each tool to create a responsive interface and efficient data management system. The process demanded technical expertise, problem-solving, and teamwork to overcome hurdles and deliver a smooth user experience. Despite its complexity, completing this project was deeply fulfilling and reinforced the value of collaboration and perseverance in tackling ambitious goals.</h5>
+            <h5 className="mt-3">We built the platform using TypeScript, React, Node.js, and MongoDB, leveraging each tool to create a responsive interface and efficient data management system. The process demanded technical expertise, problem-solving, and teamwork to overcome hurdles and deliver a smooth user experience. Despite its complexity, completing this project was deeply fulfilling and reinforced the value of collaboration and perseverance in tackling ambitious goals.</h5>
           </div>
         </Col>
       </Row>
