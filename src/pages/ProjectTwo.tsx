@@ -36,7 +36,8 @@ function ProjectTwo() {
             </Row>
           </div>
           <div className="mt-3">
-            <h5>This was a group project including me and three other developers. This project was a very intense and difficult project with all the funtionality that was needed for it to work properly. The app was designed to inspire users to try new exercises and keep track of the exercises that work for them. After creating a free account, the user will be able to look up exercises by the muscle they are targeting for the workout, save the exercises they like most, update them if needed, and delete the more entry level exercises as they gain experience. This was a difficult website to make when it came to the funtionality but was super rewarding to work on. The stack we used was Typescript, React, Node.js, and MongoDB. It was such a challenge but was worth it in the end.</h5>
+            <h5>This project was a collaborative effort between myself and three other developers, designed to create a web application that inspires users to try new exercises and manage their fitness routines. The app allows users to create a free account, browse exercises by targeted muscle groups, save their favorites, update routines as they progress, and delete beginner-level exercises as their skills improve. Balancing usability with robust functionality made the project both challenging and rewarding.</h5>
+            <h5>We built the platform using TypeScript, React, Node.js, and MongoDB, leveraging each tool to create a responsive interface and efficient data management system. The process demanded technical expertise, problem-solving, and teamwork to overcome hurdles and deliver a smooth user experience. Despite its complexity, completing this project was deeply fulfilling and reinforced the value of collaboration and perseverance in tackling ambitious goals.</h5>
           </div>
         </Col>
       </Row>
