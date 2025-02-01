@@ -133,7 +133,7 @@ function Landing() {
       <Row>
         <Col xs={12} md={6}>
           <div style={{ marginTop: '75px' }}>
-            <h1 className="typing-animation hero-text" style={{ fontSize: '4rem' }}>
+            <h1 className="typing-animation hero-text main-heading" style={{ fontSize: '4rem' }}>
               Hi, I'm <br />
               Roman Scandariato
             </h1>
@@ -171,7 +171,7 @@ function Landing() {
         </Col>
       </Row>
       <Row>
-        <Col ref={projectsRef} className={`mt-5 projects-section ${isVisible ? 'fade-in' : ''}`}>
+        <Col ref={projectsRef} className={`mt-5 projects-section ${isVisible ? 'fade-in' : ''}`} md={6}>
           <img
             src="/images/MaypoDeluxeMain.png"
             alt="Project Image 1"
@@ -182,7 +182,7 @@ function Landing() {
           <p style={{ marginTop: '20px' }}>Full Stack Web App Development</p>
           <Button className="read-more-btn" onClick={() => navigate('/ProjectOne')}>Read more</Button>
         </Col>
-        <Col ref={projectsRef} className={`mt-5 projects-section-2 ${isVisible ? 'fade-in' : ''}`}>
+        <Col ref={projectsRef} className={`mt-5 projects-section-2 ${isVisible ? 'fade-in' : ''}`} md={6}>
           <img
             src="/images/FirstStepMain.png"
             alt="Project Image 2"

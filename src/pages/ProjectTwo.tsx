@@ -16,7 +16,7 @@ function ProjectTwo() {
             alt="Project 2 Main Image"
             className="img-fluid mt-5"
           />
-          <h1 style={{ fontSize: '6rem', marginTop: '50px', fontWeight: '400' }}>FirstStep Fitness</h1>
+          <h1 className="project-title-2" style={{ fontSize: '6rem', marginTop: '50px', fontWeight: '400' }}>FirstStep Fitness</h1>
           <div className="links-container" style={{ marginTop: '65px' }}>
             <Row>
               <Col>
