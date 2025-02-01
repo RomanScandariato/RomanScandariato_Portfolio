@@ -133,7 +133,7 @@ function Landing() {
       <Row>
         <Col xs={12} md={6}>
           <div style={{ marginTop: '75px' }}>
-            <h1 className="typing-animation" style={{ fontSize: '4rem' }}>
+            <h1 className="typing-animation hero-text" style={{ fontSize: '4rem' }}>
               Hi, I'm <br />
               Roman Scandariato
             </h1>
