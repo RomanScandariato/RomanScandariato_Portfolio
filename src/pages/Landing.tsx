@@ -199,7 +199,7 @@ function Landing() {
           <Row>
             <hr className="custom-hr" />
           </Row>
-          <h2 ref={h2Ref1} className={isH2Visible1 ? 'fade-in-2' : 'hidden'}>“I see it, you know when I'm talking to you or when you've asked me questions or you're showing me something. I see that comprehension that's very rare at this point, and for 3 months in.. huge potential for you in the future. Keep that drive going because you have something here, and you're very far along in your understanding. Everybody here that's worked with you has to agree that Roman has been a big integral and a vital part of everybody's success.” - JD Tadlock</h2>
+          <h2 ref={h2Ref1} className={isH2Visible1 ? 'fade-in-2' : 'hidden'}>“I see it, when I'm talking to you or when you've asked me questions or you're showing me something. I see that comprehension that's very rare at this point.. huge potential for you in the future. Keep that drive going because you have something here, and you're very far along in your understanding. Everybody here that's worked with you has to agree that Roman has been a big integral and vital part of everybody's success.” - JD Tadlock</h2>
         </Col>
       </Row>
       <Row>

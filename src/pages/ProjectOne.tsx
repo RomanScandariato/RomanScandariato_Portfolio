@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectOne() {
@@ -33,6 +33,14 @@ function ProjectOne() {
                   <h2 style={{ fontSize: '1.5rem', color: 'white' }}>maypodeluxe.com</h2>
                 </a>
               </Col>
+            </Row>
+            <Row>
+              <span style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                <FontAwesomeIcon icon={faReact} size="2x" style={{ color: 'white', marginRight: '20px' }} />
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                <FontAwesomeIcon icon={faNodeJs} size="2x" style={{ color: 'white', marginRight: '20px' }} />
+              </span>
             </Row>
           </div>
           <div className="mt-3">

@@ -157,6 +157,6 @@ html, body, #root {
 
 @media (max-width: 768px) {
   .project-title-2 {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
 }
